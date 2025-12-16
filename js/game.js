@@ -483,13 +483,15 @@ const Game = {
 
     /**
      * 检查屏幕方向
+     * 注：现代移动浏览器已能智能处理横竖屏切换，禁用警告功能
      */
     checkOrientation() {
-        if (window.innerWidth > window.innerHeight) {
-            this.showOrientationWarning();
-        } else {
-            this.hideOrientationWarning();
-        }
+        // 禁用横屏警告，避免阻挡交互
+        // if (window.innerWidth > window.innerHeight) {
+        //     this.showOrientationWarning();
+        // } else {
+        //     this.hideOrientationWarning();
+        // }
     },
 
     /**
