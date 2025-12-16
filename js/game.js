@@ -309,14 +309,14 @@ const Game = {
         const btn = document.querySelector('.control-btn.pause');
 
         if (this.isPaused) {
-            btn.textContent = '▶️ 继续';
+            btn.textContent = '▶️';
             if (this.gameTimer) {
                 clearInterval(this.gameTimer);
                 this.gameTimer = null;
             }
             console.log('游戏已暂停');
         } else {
-            btn.textContent = '⏸️ 暂停';
+            btn.textContent = '⏸️';
             this.startTimer();
             console.log('游戏继续');
         }
@@ -526,9 +526,9 @@ const Game = {
         AudioManager.toggleBackgroundMusic();
         const btn = document.querySelector('.control-btn.music');
         if (AudioManager.isBackgroundMusicEnabled) {
-            btn.textContent = '🎵 音乐';
+            btn.textContent = '🎵';
         } else {
-            btn.textContent = '🔇 静音';
+            btn.textContent = '🔇';
         }
     },
 
@@ -539,9 +539,9 @@ const Game = {
         AudioManager.toggleSound();
         const btn = document.querySelector('.control-btn.sound');
         if (AudioManager.isSoundEnabled) {
-            btn.textContent = '🔊 音效';
+            btn.textContent = '🔊';
         } else {
-            btn.textContent = '🔇 静音';
+            btn.textContent = '🔇';
         }
     }
 };
