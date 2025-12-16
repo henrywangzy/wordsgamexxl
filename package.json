@@ -1,0 +1,24 @@
+{
+  "name": "word-game",
+  "version": "1.0.0",
+  "description": "📚 一款专为移动端设计的英语单词学习H5小游戏",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrywangzy/wordsgamexxl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/henrywangzy/wordsgamexxl/issues"
+  },
+  "homepage": "https://github.com/henrywangzy/wordsgamexxl#readme"
+}
