@@ -21,13 +21,13 @@ const AudioManager = {
 
         // 创建背景音乐音频对象
         this.backgroundMusic = new Audio();
-        this.backgroundMusic.src = 'assets/background.mp3';
+        this.backgroundMusic.src = 'background.mp3';
         this.backgroundMusic.loop = true;
         this.backgroundMusic.volume = this.volume.background;
 
         // 创建奖励音效音频对象
         this.rewardSound = new Audio();
-        this.rewardSound.src = 'assets/welldown.mp3';
+        this.rewardSound.src = 'welldown.mp3';
         this.rewardSound.volume = this.volume.sound;
 
         // 预加载音频
