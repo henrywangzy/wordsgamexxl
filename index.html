@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>单词消消乐 - 移动端H5版</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 背景装饰 -->
+    <div class="bg-decoration"></div>
+
+    <!-- 飘浮装饰元素 -->
+    <div class="floating-icons">
+        <div class="floating-icon">📚</div>
+        <div class="floating-icon">✨</div>
+        <div class="floating-icon">🎯</div>
+        <div class="floating-icon">🌟</div>
+        <div class="floating-icon">💡</div>
+    </div>
+
+    <!-- ========== 首页（年级选择）========== -->
+    <div class="page active" id="homePage">
+        <div class="home-container">
+            <div class="game-icon">📚</div>
+            <h1 class="home-title">单词消消乐</h1>
+            <p class="home-subtitle">
+                通过趣味配对，让学习更有趣！<br>
+                选择你的年级，开始挑战吧！
+            </p>
+
+            <!-- 年级选择区 -->
+            <div class="grade-section">
+                <h2 class="section-title">选择年级</h2>
+                <div class="grade-buttons">
+                    <button class="grade-btn" onclick="Game.selectGrade('grade1')">
+                        一年级
+                        <div class="grade-info">4×9 · 18对 · 120秒</div>
+                    </button>
+                    <button class="grade-btn" onclick="Game.selectGrade('grade2')">
+                        二年级
+                        <div class="grade-info">4×9 · 18对 · 120秒</div>
+                    </button>
+                    <button class="grade-btn" onclick="Game.selectGrade('grade3')">
+                        三年级
+                        <div class="grade-info">4×9 · 18对 · 150秒</div>
+                    </button>
+                    <button class="grade-btn" onclick="Game.selectGrade('grade4')">
+                        四年级
+                        <div class="grade-info">4×9 · 18对 · 150秒</div>
+                    </button>
+                    <button class="grade-btn" onclick="Game.selectGrade('grade5')">
+                        五年级
+                        <div class="grade-info">4×10 · 20对 · 180秒</div>
+                    </button>
+                    <button class="grade-btn" onclick="Game.selectGrade('grade6')">
+                        六年级
+                        <div class="grade-info">4×10 · 20对 · 180秒</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 署名 -->
+        <div class="credit">
+            👩‍💻 制作: 泡泡妈学AI
+        </div>
+    </div>
+
+    <!-- ========== 游戏页 ========== -->
+    <div class="page" id="gamePage">
+        <!-- 顶部统计栏 -->
+        <div class="game-header">
+            <div class="stat-item">
+                <div class="stat-label">得分</div>
+                <div class="stat-value" id="gameScore">0</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-label">连击</div>
+                <div class="stat-value" id="gameCombo">0</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-label">⏱️ 时间</div>
+                <div class="stat-value" id="gameTimer">120</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-label">正确率</div>
+                <div class="stat-value" id="gameAccuracy">100%</div>
+            </div>
+        </div>
+
+        <!-- 进度条 -->
+        <div class="progress-container">
+            <div class="progress-fill" id="gameProgress" style="width: 0%;"></div>
+        </div>
+
+        <!-- 游戏板容器 - 4列×9行竖直布局 -->
+        <div class="game-board-container">
+            <div class="game-board easy" id="gameBoard">
+                <!-- 卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+
+        <!-- 控制按钮 -->
+        <div class="game-controls">
+            <button class="control-btn home" onclick="Game.backToHome()">
+                🏠 首页
+            </button>
+            <button class="control-btn pause" onclick="Game.togglePause()">
+                ⏸️ 暂停
+            </button>
+            <button class="control-btn restart" onclick="Game.restartGame()">
+                🔄 重新
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== 游戏结束页 ========== -->
+    <div class="page" id="gameEndPage">
+        <div class="end-content">
+            <div class="end-icon">🏆</div>
+            <h2 class="end-title">游戏结束！</h2>
+            <p class="end-subtitle" id="endSubtitle">太棒了！</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">最终得分</div>
+                    <div class="stat-value" id="finalScore">2850</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-label">正确率</div>
+                    <div class="stat-value" id="finalAccuracy">92%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">用时</div>
+                    <div class="stat-value" id="finalTime">95秒</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">最高连击</div>
+                    <div class="stat-value" id="finalCombo">8</div>
+                </div>
+            </div>
+
+            <div class="achievement" id="achievement">
+                🎉 获得成就：连击达人！
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-btn primary" onclick="Game.restartGame()">
+                    🔄 再玩一次
+                </button>
+                <button class="action-btn secondary" onclick="Game.shareScore()">
+                    📤 分享成绩
+                </button>
+                <button class="action-btn secondary" onclick="Game.showPage('homePage')">
+                    🏠 返回首页
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript 文件 -->
+    <script src="js/word-database.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/game.js"></script>
+
+    <script>
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('页面加载完成，可以开始交互！');
+            Game.init();
+        });
+
+        // 防止双击缩放
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // 横屏检测
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                Game.checkOrientation();
+            }, 100);
+        });
+
+        window.addEventListener('resize', function() {
+            Game.checkOrientation();
+        });
+    </script>
+</body>
+</html>
