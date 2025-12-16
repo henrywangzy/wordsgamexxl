@@ -515,7 +515,8 @@ const Game = {
         if (warning) {
             warning.remove();
         }
-    },
+    }
+};
 
     /**
      * 切换背景音乐
@@ -542,4 +543,3 @@ const Game = {
             btn.textContent = '🔇 静音';
         }
     }
-};

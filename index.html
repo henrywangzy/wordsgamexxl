@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <script src="js/audio.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>单词消消乐 - 移动端H5版</title>
     <link rel="stylesheet" href="css/style.css">
@@ -161,12 +160,12 @@
 
     <!-- JavaScript 文件 -->
     <script src="js/word-database.js"></script>
+    <script src="js/audio.js"></script>
     <script src="js/speech.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/game.js"></script>
 
     <script>
-        // 页面加载完成后的初始化
         document.addEventListener('DOMContentLoaded', function() {
             console.log('页面加载完成，可以开始交互！');
             Game.init();
