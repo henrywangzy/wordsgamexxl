@@ -70,6 +70,8 @@ const Game = {
     startGame() {
         console.log('开始游戏...');
         const config = GradeConfig[this.currentGrade];
+        // 播放背景音乐
+        AudioManager.playBackgroundMusic();
 
         // 重置游戏状态
         this.resetGameState(config);
@@ -212,6 +214,8 @@ const Game = {
         this.matchedPairs++;
 
         // 振动反馈
+        // 播放奖励音效
+        AudioManager.playRewardSound();
         VibrationManager.trigger('success');
 
         // 连击奖励
@@ -327,6 +331,8 @@ const Game = {
             this.gameTimer = null;
         }
 
+        // 暂停背景音乐
+        AudioManager.pauseBackgroundMusic();
         const timeUsed = Math.round((Date.now() - this.gameStartTime) / 1000);
         const accuracy = this.correctMatches + this.wrongMatches > 0
             ? Math.round((this.correctMatches / (this.correctMatches + this.wrongMatches)) * 100)
@@ -511,3 +517,29 @@ const Game = {
         }
     }
 };
+
+    /**
+     * 切换背景音乐
+     */
+    toggleMusic() {
+        AudioManager.toggleBackgroundMusic();
+        const btn = document.querySelector('.control-btn.music');
+        if (AudioManager.isBackgroundMusicEnabled) {
+            btn.textContent = '🎵 音乐';
+        } else {
+            btn.textContent = '🔇 静音';
+        }
+    },
+
+    /**
+     * 切换音效
+     */
+    toggleSound() {
+        AudioManager.toggleSound();
+        const btn = document.querySelector('.control-btn.sound');
+        if (AudioManager.isSoundEnabled) {
+            btn.textContent = '🔊 音效';
+        } else {
+            btn.textContent = '🔇 静音';
+        }
+    }
