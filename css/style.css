@@ -438,39 +438,23 @@ body {
     padding: 6px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    /* 默认4列×5行布局（适合大部分年级） */
+    /* 4列×9行的竖直布局 */
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     /* 紧凑布局，充分利用屏幕宽度 */
     width: calc(100vw - 16px);
-    height: calc((100vw - 16px) * 5 / 4);
+    height: calc((100vw - 16px) * 9 / 4);
     max-width: 360px;
-    max-height: 450px;
+    max-height: 810px;
     z-index: 1;
 }
 
-/* 4列×4行（一年级、六年级 - 8对） */
-.game-board.easy {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    height: calc((100vw - 16px) * 4 / 4);
-    max-height: 360px;
-}
-
-/* 4列×5行（二、三年级 - 9-10对） */
-.game-board.medium {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: calc((100vw - 16px) * 5 / 4);
-    max-height: 450px;
-}
-
-/* 4列×5行（五年级 - 10对） */
+/* 4列×10行（高年级） */
 .game-board.hard {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: calc((100vw - 16px) * 5 / 4);
-    max-height: 450px;
+    grid-template-rows: repeat(10, 1fr);
+    height: calc((100vw - 16px) * 10 / 4);
+    max-height: 900px;
 }
 
 /* 单词卡片 - 填满网格，增大字体 */
