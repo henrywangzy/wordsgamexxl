@@ -87,11 +87,21 @@ const GradeConfig = {
 
 // 获取指定年级和数量的单词
 function getWords(count, gradeLevel = 1) {
-    // 获取指定年级及以下的所有单词（允许低年级使用简单词汇）
-    const availableWords = WordDatabase.filter(word => word.grade <= gradeLevel);
+    // 只获取指定年级的单词（严格的年级分级）
+    const availableWords = WordDatabase.filter(word => word.grade === gradeLevel);
 
-    // 如果可用单词不足，则使用所有单词
-    const pool = availableWords.length >= count ? availableWords : WordDatabase;
+    // 如果该年级单词不足，则从低年级补充
+    let pool = availableWords;
+    if (availableWords.length < count) {
+        // 从低年级补充单词
+        const lowerGrades = WordDatabase.filter(word => word.grade < gradeLevel);
+        pool = [...availableWords, ...lowerGrades];
+    }
+
+    // 如果还不够，使用所有单词
+    if (pool.length < count) {
+        pool = WordDatabase;
+    }
 
     // 随机打乱并选择count个单词
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
