@@ -369,6 +369,7 @@ body {
     padding: 3px 8px;
     border-radius: 6px;
     margin-bottom: 0px;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -427,6 +428,7 @@ body {
     padding: 1px;
     overflow: hidden;
     min-height: 0;
+    z-index: 10;
 }
 
 .game-board {
@@ -552,7 +554,7 @@ body {
     gap: 3px;
     margin-top: 0px;
     position: relative;
-    z-index: 100;
+    z-index: 1;
     padding-bottom: 2px;
 }
 
