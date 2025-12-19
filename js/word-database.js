@@ -106,7 +106,51 @@ function generateCards(wordCount) {
     });
 
     // 打乱卡片顺序
-    return shuffleArray(cards);
+    const shuffledCards = shuffleArray(cards);
+
+    // 验证卡片配对逻辑
+    if (!validateCardPairs(shuffledCards)) {
+        console.error('卡片配对验证失败！');
+        console.log('卡片列表:', shuffledCards);
+    }
+
+    return shuffledCards;
+}
+
+// 验证卡片配对逻辑
+function validateCardPairs(cards) {
+    // 检查每个matchId是否都有英文和中文两个卡片
+    const matchGroups = {};
+
+    cards.forEach(card => {
+        if (!matchGroups[card.matchId]) {
+            matchGroups[card.matchId] = [];
+        }
+        matchGroups[card.matchId].push(card.type);
+    });
+
+    // 验证每个单词都有英文和中文
+    for (const [matchId, types] of Object.entries(matchGroups)) {
+        const hasEnglish = types.includes('english');
+        const hasChinese = types.includes('chinese');
+
+        if (!hasEnglish || !hasChinese) {
+            console.error(`配对错误：${matchId} 缺少 ${!hasEnglish ? '英文' : ''} ${!hasChinese ? '中文' : ''}`);
+            return false;
+        }
+
+        // 检查是否有重复的英文或中文
+        const englishCount = types.filter(t => t === 'english').length;
+        const chineseCount = types.filter(t => t === 'chinese').length;
+
+        if (englishCount !== 1 || chineseCount !== 1) {
+            console.error(`配对错误：${matchId} 重复！英文:${englishCount} 中文:${chineseCount}`);
+            return false;
+        }
+    }
+
+    console.log('✅ 卡片配对验证通过！', Object.keys(matchGroups).length, '对单词');
+    return true;
 }
 
 // 打乱数组

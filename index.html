@@ -69,7 +69,27 @@
 
     <!-- ========== 游戏页 ========== -->
     <div class="page" id="gamePage">
-        <!-- 顶部统计栏 -->
+        <!-- 控制按钮 - 移至顶部 -->
+        <div class="game-controls">
+            <button class="control-btn home" onclick="Game.backToHome()">🏠</button>
+            <button class="control-btn pause" onclick="Game.togglePause()">⏸️</button>
+            <button class="control-btn restart" onclick="Game.restartGame()">🔄</button>
+            <button class="control-btn music" onclick="Game.toggleMusic()">🎵</button>
+        </div>
+
+        <!-- 进度条 -->
+        <div class="progress-container">
+            <div class="progress-fill" id="gameProgress" style="width: 0%;"></div>
+        </div>
+
+        <!-- 游戏板容器 - 4列×9行竖直布局 -->
+        <div class="game-board-container">
+            <div class="game-board easy" id="gameBoard">
+                <!-- 卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+
+        <!-- 统计栏 - 移至底部 -->
         <div class="game-header">
             <div class="stat-item">
                 <div class="stat-label">得分</div>
@@ -90,26 +110,6 @@
                 <div class="stat-label">正确率</div>
                 <div class="stat-value" id="gameAccuracy">100%</div>
             </div>
-        </div>
-
-        <!-- 进度条 -->
-        <div class="progress-container">
-            <div class="progress-fill" id="gameProgress" style="width: 0%;"></div>
-        </div>
-
-        <!-- 游戏板容器 - 4列×9行竖直布局 -->
-        <div class="game-board-container">
-            <div class="game-board easy" id="gameBoard">
-                <!-- 卡片将通过JavaScript动态生成 -->
-            </div>
-        </div>
-
-        <!-- 控制按钮 -->
-        <div class="game-controls">
-            <button class="control-btn home" onclick="Game.backToHome()">🏠</button>
-            <button class="control-btn pause" onclick="Game.togglePause()">⏸️</button>
-            <button class="control-btn restart" onclick="Game.restartGame()">🔄</button>
-            <button class="control-btn music" onclick="Game.toggleMusic()">🎵</button>
         </div>
     </div>
 
