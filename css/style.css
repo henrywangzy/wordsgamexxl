@@ -355,24 +355,24 @@ body {
 
 /* ========== 游戏页样式 ========== */
 #gamePage {
-    padding: 1px;
-    padding-top: calc(env(safe-area-inset-top, 0) + 1px);
-    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 60px);
+    padding: 0;
+    padding-top: calc(env(safe-area-inset-top, 0) + 0px);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 5px);
 }
 
-/* 顶部统计栏 - 适中 */
+/* 顶部统计栏 - 极紧凑 */
 .game-header {
     background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(10px);
-    padding: 8px 12px;
-    border-radius: 10px;
-    margin-bottom: 2px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-bottom: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-size: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 11px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .stat-item {
@@ -383,13 +383,13 @@ body {
 }
 
 .stat-label {
-    font-size: 9px;
+    font-size: 8px;
     opacity: 0.8;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .stat-value {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -400,13 +400,13 @@ body {
     margin: 0 5px;
 }
 
-/* 进度条 - 适中 */
+/* 进度条 - 极紧凑 */
 .progress-container {
     background: rgba(255, 255, 255, 0.2);
-    height: 4px;
-    border-radius: 2px;
+    height: 2px;
+    border-radius: 1px;
     overflow: hidden;
-    margin-bottom: 2px;
+    margin-bottom: 0px;
 }
 
 .progress-fill {
@@ -416,32 +416,32 @@ body {
     transition: width 0.3s ease;
 }
 
-/* 游戏板容器 - 占据更多空间 */
+/* 游戏板容器 - 极紧凑布局 */
 .game-board-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 1px 2px;
     overflow: hidden;
 }
 
 .game-board {
     display: grid;
-    gap: 3px;
+    gap: 2px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 8px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     /* 4列×9行的竖直布局 */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    /* 占据更多空间，左右边距1px */
-    width: calc(100vw - 2px);
+    /* 占据更多空间 */
+    width: calc(100vw - 6px);
     max-width: 380px;
     aspect-ratio: 4/7;
-    /* 进一步降低高度，为按钮留出足够空间 */
-    max-height: 50vh;
+    /* 最大高度利用率 */
+    max-height: 72vh;
     z-index: 1;
 }
 
@@ -543,22 +543,22 @@ body {
     word-break: break-word;
 }
 
-/* 控制按钮 - 适中尺寸 */
+/* 控制按钮 - 极紧凑布局 */
 .game-controls {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    margin-top: 2px;
+    gap: 4px;
+    margin-top: 0px;
     position: relative;
     z-index: 100;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 .control-btn {
-    height: 42px;
+    height: 32px;
     border: none;
-    border-radius: 21px;
-    font-size: 13px;
+    border-radius: 16px;
+    font-size: 11px;
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -566,7 +566,7 @@ body {
     position: relative;
     overflow: hidden;
     z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .control-btn::before {
