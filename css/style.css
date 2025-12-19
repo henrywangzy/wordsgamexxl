@@ -416,7 +416,7 @@ body {
     transition: width 0.3s ease;
 }
 
-/* 游戏板容器 - 极紧凑布局 */
+/* 游戏板容器 - 自动填充剩余空间 */
 .game-board-container {
     flex: 1;
     display: flex;
@@ -424,6 +424,7 @@ body {
     align-items: center;
     padding: 1px 2px;
     overflow: hidden;
+    min-height: 0; /* 重要：允许flex子项收缩 */
 }
 
 .game-board {
@@ -436,12 +437,11 @@ body {
     /* 4列×9行的竖直布局 */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    /* 占据更多空间 */
-    width: calc(100vw - 6px);
+    /* 填满容器 */
+    width: 100%;
+    height: 100%;
     max-width: 380px;
     aspect-ratio: 4/7;
-    /* 最大高度利用率 */
-    max-height: 72vh;
     z-index: 1;
 }
 
