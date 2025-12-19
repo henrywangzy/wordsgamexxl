@@ -6,7 +6,7 @@
 const AudioManager = {
     backgroundMusic: null,
     rewardSound: null,
-    isBackgroundMusicEnabled: false,
+    isBackgroundMusicEnabled: true,
     isSoundEnabled: true,
     volume: {
         background: 0.2,  // 背景音乐音量（20%）

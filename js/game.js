@@ -25,6 +25,12 @@ const Game = {
         console.log('游戏初始化...');
         // 初始化语音系统
         SpeechManager.init();
+
+        // 尝试播放背景音乐（首页音乐）
+        // 注意：由于浏览器自动播放策略，可能需要用户首次交互后才能播放
+        setTimeout(() => {
+            AudioManager.playBackgroundMusic();
+        }, 500);
     },
 
     /**
@@ -58,6 +64,9 @@ const Game = {
         // 振动反馈
         VibrationManager.trigger('select');
 
+        // 确保背景音乐在游戏开始前播放（用户交互后可以自动播放）
+        AudioManager.playBackgroundMusic();
+
         // 200ms后开始游戏
         setTimeout(() => {
             this.startGame();
@@ -70,8 +79,7 @@ const Game = {
     startGame() {
         console.log('开始游戏...');
         const config = GradeConfig[this.currentGrade];
-        // 播放背景音乐
-        AudioManager.playBackgroundMusic();
+        // 背景音乐已在用户交互后自动播放，无需重复调用
 
         // 重置游戏状态
         this.resetGameState(config);
@@ -412,6 +420,9 @@ const Game = {
             this.gameTimer = null;
         }
         this.showPage('homePage');
+
+        // 返回首页时继续播放背景音乐
+        AudioManager.playBackgroundMusic();
     },
 
     /**
