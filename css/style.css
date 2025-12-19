@@ -357,7 +357,9 @@ body {
 #gamePage {
     padding: 0;
     padding-top: calc(env(safe-area-inset-top, 0) + 0px);
-    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 5px);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 60px);
+    display: flex;
+    flex-direction: column;
 }
 
 /* 顶部统计栏 - 极紧凑 */
@@ -416,15 +418,15 @@ body {
     transition: width 0.3s ease;
 }
 
-/* 游戏板容器 - 自动填充剩余空间 */
+/* 游戏板容器 - 自适应屏幕大小 */
 .game-board-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1px 2px;
+    padding: 2px;
     overflow: hidden;
-    min-height: 0; /* 重要：允许flex子项收缩 */
+    min-height: 0;
 }
 
 .game-board {
@@ -437,11 +439,10 @@ body {
     /* 4列×9行的竖直布局 */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    /* 填满容器 */
-    width: 100%;
-    height: 100%;
-    max-width: 380px;
-    aspect-ratio: 4/7;
+    /* 自适应宽度，最大320px */
+    width: min(calc(100vw * 0.9), 320px);
+    height: auto;
+    aspect-ratio: 4/9;
     z-index: 1;
 }
 
