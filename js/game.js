@@ -122,8 +122,8 @@ const Game = {
         gameBoard.className = `game-board ${config.level}`;
         gameBoard.innerHTML = '';
 
-        // 生成卡片数据
-        const cards = generateCards(config.pairs);
+        // 生成卡片数据（传递年级参数）
+        const cards = generateCards(config.pairs, config.grade);
 
         // 创建卡片元素
         cards.forEach((card, index) => {
