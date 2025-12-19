@@ -431,18 +431,19 @@ body {
 
 .game-board {
     display: grid;
-    gap: 2px;
+    gap: 3px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 3px;
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     /* 4列×9行的竖直布局 */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    /* 自适应宽度，最大320px */
-    width: min(calc(100vw * 0.9), 320px);
-    height: auto;
-    aspect-ratio: 4/9;
+    /* 紧凑布局，适合手机屏幕 */
+    width: min(320px, calc(100vw * 0.7));
+    height: min(640px, calc(100vw * 0.7 * 9 / 4));
+    max-width: 320px;
+    max-height: 640px;
     z-index: 1;
 }
 
