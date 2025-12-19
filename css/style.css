@@ -357,7 +357,7 @@ body {
 #gamePage {
     padding: 1px;
     padding-top: calc(env(safe-area-inset-top, 0) + 1px);
-    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 1px);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 60px);
 }
 
 /* 顶部统计栏 - 适中 */
@@ -423,6 +423,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
+    overflow: hidden;
 }
 
 .game-board {
@@ -439,8 +440,9 @@ body {
     width: calc(100vw - 2px);
     max-width: 380px;
     aspect-ratio: 4/7;
-    /* 增大最大高度 */
-    max-height: 70vh;
+    /* 进一步降低高度，为按钮留出足够空间 */
+    max-height: 50vh;
+    z-index: 1;
 }
 
 /* 4列×10行（高年级） */
@@ -547,6 +549,9 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-top: 2px;
+    position: relative;
+    z-index: 100;
+    padding-bottom: 5px;
 }
 
 .control-btn {
@@ -560,6 +565,8 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .control-btn::before {
@@ -587,6 +594,14 @@ body {
 
 .control-btn.restart {
     background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+}
+
+.control-btn.music {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+}
+
+.control-btn.sound {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
 }
 
 .control-btn:active {
