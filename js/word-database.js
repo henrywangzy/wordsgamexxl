@@ -1,6 +1,6 @@
 /**
  * 单词数据库
- * 包含沪教版九年级Unit 5的29个单词
+ * 包含沪教版九年级Unit 5及相关扩展词汇，共58个单词
  */
 
 const WordDatabase = [
@@ -32,7 +32,38 @@ const WordDatabase = [
     { english: 'pass out', chinese: '昏迷', emoji: '😵', partOfSpeech: 'phr.v.' },
     { english: 'keep still', chinese: '保持静止', emoji: '🧘', partOfSpeech: 'phr.v.' },
     { english: 'emergency exit', chinese: '紧急出口', emoji: '🚪', partOfSpeech: 'n.' },
-    { english: 'on weekdays', chinese: '在工作日', emoji: '📅', partOfSpeech: 'phr.' }
+    { english: 'on weekdays', chinese: '在工作日', emoji: '📅', partOfSpeech: 'phr.' },
+
+    // 扩展词汇（新增29个单词）
+    { english: 'audience', chinese: '观众', emoji: '👥', partOfSpeech: 'n.' },
+    { english: 'broadcast', chinese: '广播', emoji: '📻', partOfSpeech: 'v./n.' },
+    { english: 'celebrity', chinese: '名人', emoji: '🌟', partOfSpeech: 'n.' },
+    { english: 'drama', chinese: '戏剧', emoji: '🎭', partOfSpeech: 'n.' },
+    { english: 'episode', chinese: '一集', emoji: '📺', partOfSpeech: 'n.' },
+    { english: 'famous', chinese: '著名的', emoji: '🏆', partOfSpeech: 'adj.' },
+    { english: 'host', chinese: '主持人', emoji: '🎤', partOfSpeech: 'n./v.' },
+    { english: 'interview', chinese: '采访', emoji: '🎙️', partOfSpeech: 'n./v.' },
+    { english: 'journalist', chinese: '记者', emoji: '🖊️', partOfSpeech: 'n.' },
+    { english: 'magazine', chinese: '杂志', emoji: '📚', partOfSpeech: 'n.' },
+    { english: 'performance', chinese: '表演', emoji: '🎪', partOfSpeech: 'n.' },
+    { english: 'presenter', chinese: '主持人', emoji: '📺', partOfSpeech: 'n.' },
+    { english: 'quiz', chinese: '测验', emoji: '❓', partOfSpeech: 'n.' },
+    { english: 'reporter', chinese: '记者', emoji: '📰', partOfSpeech: 'n.' },
+    { english: 'schedule', chinese: '时间表', emoji: '⏰', partOfSpeech: 'n.' },
+    { english: 'television', chinese: '电视', emoji: '📺', partOfSpeech: 'n.' },
+    { english: 'variety show', chinese: '综艺节目', emoji: '🎭', partOfSpeech: 'n.' },
+    { english: 'commercial', chinese: '广告', emoji: '📢', partOfSpeech: 'n.' },
+    { english: 'entertainment', chinese: '娱乐', emoji: '🎉', partOfSpeech: 'n.' },
+    { english: 'fashion', chinese: '时尚', emoji: '👗', partOfSpeech: 'n.' },
+    { english: 'gossip', chinese: '八卦', emoji: '💬', partOfSpeech: 'n./v.' },
+    { english: 'headline', chinese: '头条', emoji: '📰', partOfSpeech: 'n.' },
+    { english: 'internet', chinese: '互联网', emoji: '🌐', partOfSpeech: 'n.' },
+    { english: 'journalism', chinese: '新闻业', emoji: '📝', partOfSpeech: 'n.' },
+    { english: 'keyboard', chinese: '键盘', emoji: '⌨️', partOfSpeech: 'n.' },
+    { english: 'livestream', chinese: '直播', emoji: '📡', partOfSpeech: 'n./v.' },
+    { english: 'microscope', chinese: '显微镜', emoji: '🔬', partOfSpeech: 'n.' },
+    { english: 'network', chinese: '网络', emoji: '🕸️', partOfSpeech: 'n.' },
+    { english: 'podcast', chinese: '播客', emoji: '🎧', partOfSpeech: 'n.' }
 ];
 
 // 年级配置映射
