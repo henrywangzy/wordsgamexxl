@@ -234,7 +234,7 @@ body {
 }
 
 .home-title {
-    font-size: 32px;
+    font-size: 64px;
     font-weight: 800;
     color: #fff;
     margin-bottom: 8px;
@@ -781,7 +781,7 @@ body {
 
 /* 响应式适配 */
 @media (max-width: 380px) {
-    .home-title { font-size: 26px; }
+    .home-title { font-size: 52px; }
     .demo-grid { padding: 6px; gap: 3px; margin-bottom: 10px; }
     .demo-tile { width: 34px; height: 28px; font-size: 9px; }
     .word-tile { font-size: 12px; }
@@ -796,7 +796,7 @@ body {
 }
 
 @media (max-width: 320px) {
-    .home-title { font-size: 22px; }
+    .home-title { font-size: 44px; }
     .demo-grid { padding: 5px; gap: 2px; margin-bottom: 8px; }
     .demo-tile { width: 30px; height: 24px; font-size: 8px; border-radius: 4px; }
     .home-container { padding: 8px 12px 10px 12px; }
