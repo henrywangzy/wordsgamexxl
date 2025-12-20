@@ -438,23 +438,24 @@ body {
     padding: 6px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    /* 4列×9行的竖直布局 */
+    /* 4列×7行的竖直布局（28格，14对单词） */
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     /* 紧凑布局，充分利用屏幕宽度 */
     width: calc(100vw - 16px);
-    height: calc((100vw - 16px) * 9 / 4);
+    height: calc((100vw - 16px) * 7 / 4);
     max-width: 360px;
-    max-height: 810px;
+    max-height: 630px;
     z-index: 1;
 }
 
-/* 4列×10行（高年级） */
+/* 所有年级统一使用4×7布局 */
 .game-board.hard {
+    /* 保持与默认相同的4×7布局 */
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    height: calc((100vw - 16px) * 10 / 4);
-    max-height: 900px;
+    grid-template-rows: repeat(7, 1fr);
+    height: calc((100vw - 16px) * 7 / 4);
+    max-height: 630px;
 }
 
 /* 单词卡片 - 填满网格，增大字体 */

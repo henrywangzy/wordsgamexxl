@@ -137,14 +137,14 @@ const WordDatabase = [
     { id: 'word120', grade: 6, english: 'cybersecurity', chinese: '网络安全', emoji: '🔒', partOfSpeech: 'n.' }
 ];
 
-// 年级配置映射 - 按年级难度分级
+// 年级配置映射 - 按年级难度分级，4列×7行（28格，14对单词）
 const GradeConfig = {
-    'grade1': { time: 90, level: 'easy', pairs: 18, difficulty: 1.0, grade: 1 },
-    'grade2': { time: 100, level: 'easy', pairs: 18, difficulty: 1.1, grade: 2 },
-    'grade3': { time: 120, level: 'medium', pairs: 18, difficulty: 1.3, grade: 3 },
-    'grade4': { time: 140, level: 'medium', pairs: 18, difficulty: 1.5, grade: 4 },
-    'grade5': { time: 160, level: 'hard', pairs: 20, difficulty: 1.8, grade: 5 },
-    'grade6': { time: 180, level: 'hard', pairs: 20, difficulty: 2.0, grade: 6 }
+    'grade1': { time: 90, level: 'easy', pairs: 14, difficulty: 1.0, grade: 1 },
+    'grade2': { time: 100, level: 'easy', pairs: 14, difficulty: 1.1, grade: 2 },
+    'grade3': { time: 110, level: 'medium', pairs: 14, difficulty: 1.3, grade: 3 },
+    'grade4': { time: 120, level: 'medium', pairs: 14, difficulty: 1.5, grade: 4 },
+    'grade5': { time: 130, level: 'hard', pairs: 14, difficulty: 1.8, grade: 5 },
+    'grade6': { time: 140, level: 'hard', pairs: 14, difficulty: 2.0, grade: 6 }
 };
 
 // 获取指定年级和数量的单词 - 严格按年级分级，不跨年级
