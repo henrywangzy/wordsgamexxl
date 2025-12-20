@@ -106,7 +106,7 @@ body {
 }
 
 .home-container {
-    padding: 40px 24px 20px 24px;
+    padding: 30px 24px 20px 24px;
     width: 100%;
     flex: 1;
     display: flex;
@@ -115,6 +115,80 @@ body {
     align-items: center;
     position: relative;
     z-index: 10;
+}
+
+/* 动态单词网格展示 */
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.demo-tile {
+    width: 60px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 8px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: lowercase;
+    box-shadow: 0 3px 10px rgba(79, 172, 254, 0.4);
+    animation: tileFloat 3s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+.demo-tile.match-a {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 3px 10px rgba(240, 147, 251, 0.4);
+    animation: matchPulse 2.5s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+.demo-tile.match-b {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 3px 10px rgba(67, 233, 123, 0.4);
+    animation: matchPulse 2.5s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes tileFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.02); }
+}
+
+@keyframes matchPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.08);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        transform: scale(0.3);
+        opacity: 0.3;
+    }
+    75% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    76% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .game-icon {
@@ -679,25 +753,27 @@ body {
 /* 响应式适配 */
 @media (max-width: 380px) {
     .home-title { font-size: 28px; }
-    .game-icon { font-size: 70px; }
+    .demo-grid { padding: 10px; gap: 5px; margin-bottom: 15px; }
+    .demo-tile { width: 54px; height: 40px; font-size: 12px; }
     .word-tile { font-size: 12px; }
     .word-content { font-size: 12px; }
     .grade-btn { padding: 14px 10px; }
-    .home-container { padding: 30px 20px 15px 20px; }
+    .home-container { padding: 25px 20px 15px 20px; }
     .grade-buttons { gap: 10px; }
     .grade-name { font-size: 15px; }
     .grade-desc { font-size: 10px; }
     .home-subtitle { font-size: 13px; }
-    .credit { padding: 15px; font-size: 11px; }
+    .credit { font-size: 11px; }
 }
 
 @media (max-width: 320px) {
     .home-title { font-size: 24px; }
-    .game-icon { font-size: 60px; }
-    .home-container { padding: 25px 16px 10px 16px; }
+    .demo-grid { padding: 8px; gap: 4px; margin-bottom: 12px; }
+    .demo-tile { width: 48px; height: 36px; font-size: 11px; border-radius: 6px; }
+    .home-container { padding: 20px 16px 10px 16px; }
     .home-subtitle { font-size: 12px; margin-bottom: 20px; }
     .grade-section { max-width: 100%; }
     .grade-btn { padding: 12px 8px; border-radius: 12px; }
     .grade-name { font-size: 14px; }
-    .credit { padding: 12px; font-size: 10px; }
+    .credit { font-size: 10px; }
 }
