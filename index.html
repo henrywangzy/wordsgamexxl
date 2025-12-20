@@ -10,97 +10,48 @@
     <!-- 背景装饰 -->
     <div class="bg-decoration"></div>
 
-    <!-- 飘浮装饰元素 -->
-    <div class="floating-icons">
-        <div class="floating-icon">📚</div>
-        <div class="floating-icon">✨</div>
-        <div class="floating-icon">🎯</div>
-        <div class="floating-icon">🌟</div>
-        <div class="floating-icon">💡</div>
-        <div class="floating-icon">🎮</div>
-        <div class="floating-icon">🔤</div>
-        <div class="floating-icon">🎲</div>
-        <div class="floating-icon">⚡</div>
-        <div class="floating-icon">🏆</div>
-        <div class="floating-icon">🎪</div>
-        <div class="floating-icon">🎨</div>
-    </div>
-
-    <!-- 动态背景粒子 -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-
     <!-- ========== 首页（年级选择）========== -->
     <div class="page active" id="homePage">
         <div class="home-container">
-            <!-- 游戏特色展示 -->
-            <div class="game-features">
-                <div class="feature-item">🎯 精准配对</div>
-                <div class="feature-item">⚡ 极速反应</div>
-                <div class="feature-item">🏆 成就系统</div>
-            </div>
+            <!-- 游戏图标 -->
+            <div class="game-icon">🎯</div>
             
-            <div class="game-icon">🎮</div>
+            <!-- 游戏标题 -->
             <h1 class="home-title">单词消消乐</h1>
-            <div class="game-subtitle">
-                <span class="subtitle-text">通过趣味配对</span>
-                <span class="subtitle-highlight">让学习更有趣</span>
-                <span class="subtitle-text">！</span>
-            </div>
-            <p class="home-description">
-                选择你的年级，开始挑战吧！<br>
-                看看你能消除多少单词！
+            
+            <!-- 游戏描述 -->
+            <p class="home-subtitle">
+                消除相同单词，挑战你的记忆力！
             </p>
 
             <!-- 年级选择区 -->
             <div class="grade-section">
-                <h2 class="section-title">选择难度等级</h2>
+                <h2 class="section-title">选择难度</h2>
                 <div class="grade-buttons">
                     <button class="grade-btn" onclick="Game.selectGrade('grade1')">
-                        一年级
-                        <div class="grade-info">4×7 · 14对 · 90秒 · 基础</div>
+                        <span class="grade-name">一年级</span>
+                        <span class="grade-desc">基础 · 90秒</span>
                     </button>
                     <button class="grade-btn" onclick="Game.selectGrade('grade2')">
-                        二年级
-                        <div class="grade-info">4×7 · 14对 · 100秒 · 简单</div>
+                        <span class="grade-name">二年级</span>
+                        <span class="grade-desc">简单 · 100秒</span>
                     </button>
                     <button class="grade-btn" onclick="Game.selectGrade('grade3')">
-                        三年级
-                        <div class="grade-info">4×7 · 14对 · 110秒 · 中等</div>
+                        <span class="grade-name">三年级</span>
+                        <span class="grade-desc">中等 · 110秒</span>
                     </button>
                     <button class="grade-btn" onclick="Game.selectGrade('grade4')">
-                        四年级
-                        <div class="grade-info">4×7 · 14对 · 120秒 · 中等</div>
+                        <span class="grade-name">四年级</span>
+                        <span class="grade-desc">中等 · 120秒</span>
                     </button>
                     <button class="grade-btn" onclick="Game.selectGrade('grade5')">
-                        五年级
-                        <div class="grade-info">4×7 · 14对 · 130秒 · 困难</div>
+                        <span class="grade-name">五年级</span>
+                        <span class="grade-desc">困难 · 130秒</span>
                     </button>
                     <button class="grade-btn" onclick="Game.selectGrade('grade6')">
-                        六年级
-                        <div class="grade-info">4×7 · 14对 · 140秒 · 困难</div>
+                        <span class="grade-name">六年级</span>
+                        <span class="grade-desc">困难 · 140秒</span>
                     </button>
-                </div>
-            </div>
-
-            <!-- 游戏说明 -->
-            <div class="game-instructions">
-                <div class="instruction-item">
-                    <span class="instruction-icon">👆</span>
-                    <span class="instruction-text">点击两个相同的单词进行配对</span>
-                </div>
-                <div class="instruction-item">
-                    <span class="instruction-icon">⚡</span>
-                    <span class="instruction-text">快速配对获得更高分数</span>
-                </div>
-                <div class="instruction-item">
-                    <span class="instruction-icon">🎯</span>
-                    <span class="instruction-text">在限定时间内完成挑战</span>
                 </div>
             </div>
         </div>
