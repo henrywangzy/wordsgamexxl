@@ -17,21 +17,49 @@
         <div class="floating-icon">🎯</div>
         <div class="floating-icon">🌟</div>
         <div class="floating-icon">💡</div>
+        <div class="floating-icon">🎮</div>
+        <div class="floating-icon">🔤</div>
+        <div class="floating-icon">🎲</div>
+        <div class="floating-icon">⚡</div>
+        <div class="floating-icon">🏆</div>
+        <div class="floating-icon">🎪</div>
+        <div class="floating-icon">🎨</div>
+    </div>
+
+    <!-- 动态背景粒子 -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
     </div>
 
     <!-- ========== 首页（年级选择）========== -->
     <div class="page active" id="homePage">
         <div class="home-container">
-            <div class="game-icon">📚</div>
+            <!-- 游戏特色展示 -->
+            <div class="game-features">
+                <div class="feature-item">🎯 精准配对</div>
+                <div class="feature-item">⚡ 极速反应</div>
+                <div class="feature-item">🏆 成就系统</div>
+            </div>
+            
+            <div class="game-icon">🎮</div>
             <h1 class="home-title">单词消消乐</h1>
-            <p class="home-subtitle">
-                通过趣味配对，让学习更有趣！<br>
-                选择你的年级，开始挑战吧！
+            <div class="game-subtitle">
+                <span class="subtitle-text">通过趣味配对</span>
+                <span class="subtitle-highlight">让学习更有趣</span>
+                <span class="subtitle-text">！</span>
+            </div>
+            <p class="home-description">
+                选择你的年级，开始挑战吧！<br>
+                看看你能消除多少单词！
             </p>
 
             <!-- 年级选择区 -->
             <div class="grade-section">
-                <h2 class="section-title">选择年级</h2>
+                <h2 class="section-title">选择难度等级</h2>
                 <div class="grade-buttons">
                     <button class="grade-btn" onclick="Game.selectGrade('grade1')">
                         一年级
@@ -59,11 +87,27 @@
                     </button>
                 </div>
             </div>
+
+            <!-- 游戏说明 -->
+            <div class="game-instructions">
+                <div class="instruction-item">
+                    <span class="instruction-icon">👆</span>
+                    <span class="instruction-text">点击两个相同的单词进行配对</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-icon">⚡</span>
+                    <span class="instruction-text">快速配对获得更高分数</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-icon">🎯</span>
+                    <span class="instruction-text">在限定时间内完成挑战</span>
+                </div>
+            </div>
         </div>
 
         <!-- 署名 -->
         <div class="credit">
-            👩‍💻 制作: 泡泡妈学AI
+            制作 | 公众号:泡泡妈学AI
         </div>
     </div>
 
