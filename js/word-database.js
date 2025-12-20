@@ -10,7 +10,7 @@ const WordDatabase = [
     { id: 'word3', grade: 1, english: 'music', chinese: '音乐', emoji: '🎵', partOfSpeech: 'n.' },
     { id: 'word4', grade: 1, english: 'game', chinese: '游戏', emoji: '🎮', partOfSpeech: 'n.' },
     { id: 'word5', grade: 1, english: 'fun', chinese: '有趣', emoji: '😄', partOfSpeech: 'adj.' },
-    { id: 'word6', grade: 1, english: 'show', chinese: '节目', emoji: '📺', partOfSpeech: 'n.' },
+    { id: 'word6', grade: 1, english: 'show', chinese: '展示', emoji: '📺', partOfSpeech: 'n.' },
     { id: 'word7', grade: 1, english: 'time', chinese: '时间', emoji: '⏰', partOfSpeech: 'n.' },
     { id: 'word8', grade: 1, english: 'star', chinese: '明星', emoji: '⭐', partOfSpeech: 'n.' },
     { id: 'word9', grade: 1, english: 'happy', chinese: '开心', emoji: '😊', partOfSpeech: 'adj.' },
@@ -33,7 +33,7 @@ const WordDatabase = [
     { id: 'word24', grade: 2, english: 'dance', chinese: '舞蹈', emoji: '💃', partOfSpeech: 'v./n.' },
     { id: 'word25', grade: 2, english: 'song', chinese: '歌曲', emoji: '🎤', partOfSpeech: 'n.' },
     { id: 'word26', grade: 2, english: 'story', chinese: '故事', emoji: '📖', partOfSpeech: 'n.' },
-    { id: 'word27', grade: 2, english: 'film', chinese: '电影', emoji: '🎬', partOfSpeech: 'n.' },
+    { id: 'word27', grade: 2, english: 'film', chinese: '影片', emoji: '🎬', partOfSpeech: 'n.' },
     { id: 'word28', grade: 2, english: 'photo', chinese: '照片', emoji: '📷', partOfSpeech: 'n.' },
     { id: 'word29', grade: 2, english: 'word', chinese: '单词', emoji: '📝', partOfSpeech: 'n.' },
     { id: 'word30', grade: 2, english: 'write', chinese: '写', emoji: '✏️', partOfSpeech: 'v.' },
@@ -50,9 +50,9 @@ const WordDatabase = [
 
     // 三年级 - 中等词汇（20个）
     { id: 'word41', grade: 3, english: 'television', chinese: '电视', emoji: '📺', partOfSpeech: 'n.' },
-    { id: 'word42', grade: 3, english: 'program', chinese: '节目', emoji: '📡', partOfSpeech: 'n.' },
+    { id: 'word42', grade: 3, english: 'program', chinese: '程序', emoji: '📡', partOfSpeech: 'n.' },
     { id: 'word43', grade: 3, english: 'magazine', chinese: '杂志', emoji: '📰', partOfSpeech: 'n.' },
-    { id: 'word44', grade: 3, english: 'radio', chinese: '广播', emoji: '📻', partOfSpeech: 'n.' },
+    { id: 'word44', grade: 3, english: 'radio', chinese: '收音机', emoji: '📻', partOfSpeech: 'n.' },
     { id: 'word45', grade: 3, english: 'movie', chinese: '电影', emoji: '🎥', partOfSpeech: 'n.' },
     { id: 'word46', grade: 3, english: 'stage', chinese: '舞台', emoji: '🎪', partOfSpeech: 'n.' },
     { id: 'word47', grade: 3, english: 'audience', chinese: '观众', emoji: '👥', partOfSpeech: 'n.' },
@@ -74,11 +74,11 @@ const WordDatabase = [
     { id: 'word61', grade: 4, english: 'director', chinese: '导演', emoji: '🎬', partOfSpeech: 'n.' },
     { id: 'word62', grade: 4, english: 'performance', chinese: '表演', emoji: '🎪', partOfSpeech: 'n.' },
     { id: 'word63', grade: 4, english: 'interview', chinese: '采访', emoji: '🎙️', partOfSpeech: 'n./v.' },
-    { id: 'word64', grade: 4, english: 'presenter', chinese: '主持人', emoji: '📺', partOfSpeech: 'n.' },
-    { id: 'word65', grade: 4, english: 'reporter', chinese: '记者', emoji: '📰', partOfSpeech: 'n.' },
+    { id: 'word64', grade: 4, english: 'presenter', chinese: '节目主持人', emoji: '📺', partOfSpeech: 'n.' },
+    { id: 'word65', grade: 4, english: 'reporter', chinese: '新闻记者', emoji: '📰', partOfSpeech: 'n.' },
     { id: 'word66', grade: 4, english: 'schedule', chinese: '时间表', emoji: '⏰', partOfSpeech: 'n.' },
     { id: 'word67', grade: 4, english: 'studio', chinese: '演播室', emoji: '🎥', partOfSpeech: 'n.' },
-    { id: 'word68', grade: 4, english: 'broadcast', chinese: '广播', emoji: '📡', partOfSpeech: 'v./n.' },
+    { id: 'word68', grade: 4, english: 'broadcast', chinese: '播放', emoji: '📡', partOfSpeech: 'v./n.' },
     { id: 'word69', grade: 4, english: 'contestant', chinese: '参赛者', emoji: '🏆', partOfSpeech: 'n.' },
     { id: 'word70', grade: 4, english: 'entertainment', chinese: '娱乐', emoji: '🎉', partOfSpeech: 'n.' },
     { id: 'word71', grade: 4, english: 'season', chinese: '季', emoji: '🍂', partOfSpeech: 'n.' },
@@ -93,7 +93,7 @@ const WordDatabase = [
     { id: 'word80', grade: 4, english: 'premiere', chinese: '首映', emoji: '🎬', partOfSpeech: 'n.' },
 
     // 五年级 - 高级词汇（20个）
-    { id: 'word81', grade: 5, english: 'journalist', chinese: '记者', emoji: '🖊️', partOfSpeech: 'n.' },
+    { id: 'word81', grade: 5, english: 'journalist', chinese: '新闻工作者', emoji: '🖊️', partOfSpeech: 'n.' },
     { id: 'word82', grade: 5, english: 'journalism', chinese: '新闻业', emoji: '📝', partOfSpeech: 'n.' },
     { id: 'word83', grade: 5, english: 'headline', chinese: '头条', emoji: '📰', partOfSpeech: 'n.' },
     { id: 'word84', grade: 5, english: 'commercial', chinese: '广告', emoji: '📢', partOfSpeech: 'n.' },
@@ -111,7 +111,7 @@ const WordDatabase = [
     { id: 'word96', grade: 5, english: 'digital', chinese: '数字的', emoji: '💻', partOfSpeech: 'adj.' },
     { id: 'word97', grade: 5, english: 'online', chinese: '在线的', emoji: '🌐', partOfSpeech: 'adj.' },
     { id: 'word98', grade: 5, english: 'offline', chinese: '离线的', emoji: '📴', partOfSpeech: 'adj.' },
-    { id: 'word99', grade: 5, english: 'upload', chinese: '上载', emoji: '☁️', partOfSpeech: 'v.' },
+    { id: 'word99', grade: 5, english: 'wireless', chinese: '无线的', emoji: '📶', partOfSpeech: 'adj.' },
     { id: 'word100', grade: 5, english: 'cloud', chinese: '云', emoji: '☁️', partOfSpeech: 'n.' },
 
     // 六年级 - 最复杂词汇（20个）
@@ -133,7 +133,7 @@ const WordDatabase = [
     { id: 'word116', grade: 6, english: 'compression', chinese: '压缩', emoji: '🗜️', partOfSpeech: 'n.' },
     { id: 'word117', grade: 6, english: 'streaming', chinese: '流媒体技术', emoji: '📡', partOfSpeech: 'n.' },
     { id: 'word118', grade: 6, english: 'protocol', chinese: '协议', emoji: '📋', partOfSpeech: 'n.' },
-    { id: 'word119', grade: 6, english: 'bandwidth', chinese: '网络带宽', emoji: '📊', partOfSpeech: 'n.' },
+    { id: 'word119', grade: 6, english: 'latency', chinese: '网络延迟', emoji: '📊', partOfSpeech: 'n.' },
     { id: 'word120', grade: 6, english: 'cybersecurity', chinese: '网络安全', emoji: '🔒', partOfSpeech: 'n.' }
 ];
 
@@ -147,26 +147,20 @@ const GradeConfig = {
     'grade6': { time: 180, level: 'hard', pairs: 20, difficulty: 2.0, grade: 6 }
 };
 
-// 获取指定年级和数量的单词
+// 获取指定年级和数量的单词 - 严格按年级分级，不跨年级
 function getWords(count, gradeLevel = 1) {
-    // 只获取指定年级的单词（严格的年级分级）
+    // 严格只获取指定年级的单词
     const availableWords = WordDatabase.filter(word => word.grade === gradeLevel);
 
-    // 如果该年级单词不足，则从低年级补充
-    let pool = availableWords;
-    if (availableWords.length < count) {
-        // 从低年级补充单词
-        const lowerGrades = WordDatabase.filter(word => word.grade < gradeLevel);
-        pool = [...availableWords, ...lowerGrades];
-    }
+    console.log(`[DEBUG] 年级${gradeLevel}共有${availableWords.length}个单词，需要${count}个`);
 
-    // 如果还不够，使用所有单词
-    if (pool.length < count) {
-        pool = WordDatabase;
+    // 验证该年级是否有足够的单词
+    if (availableWords.length < count) {
+        throw new Error(`年级${gradeLevel}单词不足！只有${availableWords.length}个，但需要${count}个`);
     }
 
     // 随机打乱并选择count个单词
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    const shuffled = [...availableWords].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, count);
 }
 
@@ -174,6 +168,9 @@ function getWords(count, gradeLevel = 1) {
 function generateCards(wordCount, gradeLevel = 1) {
     const words = getWords(wordCount, gradeLevel);
     const cards = [];
+
+    console.log(`[DEBUG] 为年级${gradeLevel}生成${wordCount}对单词，共${words.length}个单词`);
+    console.log('[DEBUG] 选中的单词:', words.map(w => `${w.english}(${w.chinese})`));
 
     words.forEach(word => {
         // 使用单词的ID作为匹配键，避免特殊字符问题
@@ -195,20 +192,44 @@ function generateCards(wordCount, gradeLevel = 1) {
         });
     });
 
+    console.log(`[DEBUG] 生成${cards.length}张卡片，${cards.length/2}对`);
+
     // 打乱卡片顺序
     const shuffledCards = shuffleArray(cards);
 
+    console.log('[DEBUG] 卡片洗牌完成，开始验证...');
+
     // 验证卡片配对逻辑
-    if (!validateCardPairs(shuffledCards)) {
-        console.error('卡片配对验证失败！');
+    const isValid = validateCardPairs(shuffledCards);
+    if (!isValid) {
+        console.error('❌ 卡片配对验证失败！');
         console.log('卡片列表:', shuffledCards);
+        console.log('按类型分组:', {
+            english: shuffledCards.filter(c => c.type === 'english').map(c => c.content),
+            chinese: shuffledCards.filter(c => c.type === 'chinese').map(c => c.content)
+        });
+        throw new Error('卡片配对逻辑错误！');
     }
 
+    console.log('✅ 卡片配对验证通过！');
     return shuffledCards;
 }
 
 // 验证卡片配对逻辑
 function validateCardPairs(cards) {
+    console.log('[DEBUG] 开始验证卡片配对逻辑，总卡片数:', cards.length);
+
+    // 统计英文和中文卡片的数量
+    const englishCount = cards.filter(c => c.type === 'english').length;
+    const chineseCount = cards.filter(c => c.type === 'chinese').length;
+
+    console.log(`[DEBUG] 英文卡片: ${englishCount}张, 中文卡片: ${chineseCount}张`);
+
+    if (englishCount !== chineseCount) {
+        console.error(`❌ 数量不匹配！英文:${englishCount}, 中文:${chineseCount}`);
+        return false;
+    }
+
     // 检查每个matchId是否都有英文和中文两个卡片
     const matchGroups = {};
 
@@ -216,16 +237,23 @@ function validateCardPairs(cards) {
         if (!matchGroups[card.matchId]) {
             matchGroups[card.matchId] = [];
         }
-        matchGroups[card.matchId].push(card.type);
+        matchGroups[card.matchId].push({
+            type: card.type,
+            content: card.content
+        });
     });
 
+    console.log(`[DEBUG] 匹配组数量: ${Object.keys(matchGroups).length}`);
+
     // 验证每个单词都有英文和中文
-    for (const [matchId, types] of Object.entries(matchGroups)) {
+    for (const [matchId, cardsOfGroup] of Object.entries(matchGroups)) {
+        const types = cardsOfGroup.map(c => c.type);
         const hasEnglish = types.includes('english');
         const hasChinese = types.includes('chinese');
 
         if (!hasEnglish || !hasChinese) {
-            console.error(`配对错误：${matchId} 缺少 ${!hasEnglish ? '英文' : ''} ${!hasChinese ? '中文' : ''}`);
+            console.error(`❌ 配对错误：${matchId} 缺少 ${!hasEnglish ? '英文' : ''} ${!hasChinese ? '中文' : ''}`);
+            console.error('卡片内容:', cardsOfGroup);
             return false;
         }
 
@@ -234,7 +262,8 @@ function validateCardPairs(cards) {
         const chineseCount = types.filter(t => t === 'chinese').length;
 
         if (englishCount !== 1 || chineseCount !== 1) {
-            console.error(`配对错误：${matchId} 重复！英文:${englishCount} 中文:${chineseCount}`);
+            console.error(`❌ 配对错误：${matchId} 重复！英文:${englishCount} 中文:${chineseCount}`);
+            console.error('卡片内容:', cardsOfGroup);
             return false;
         }
     }
